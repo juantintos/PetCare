@@ -1,0 +1,39 @@
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Dependencies
+node_modules/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# Env local (nunca commitear secrets reales)
+.env
+.env.local
+
+# Testing
+coverage/
+
+# Editor
+.vscode/
+.idea/

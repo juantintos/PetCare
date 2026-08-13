@@ -1,0 +1,33 @@
+{
+  "cli": {
+    "version": ">= 13.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://mock.petcare.local/api",
+        "EXPO_PUBLIC_USE_MOCK_API": "true"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://staging-api.petcare.app",
+        "EXPO_PUBLIC_USE_MOCK_API": "false"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://api.petcare.app",
+        "EXPO_PUBLIC_USE_MOCK_API": "false"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
