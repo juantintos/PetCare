@@ -26,7 +26,7 @@ export const petFormSchema = z.object({
     .optional()
     .refine((value) => !value || !Number.isNaN(Number(value)), 'El peso debe ser un número')
     .or(z.literal('')),
-  photo: z.string().nullable().optional(),
+  photoUrl: z.string().nullable().optional(),
   notes: z.string().max(500).optional().or(z.literal('')),
 });
 

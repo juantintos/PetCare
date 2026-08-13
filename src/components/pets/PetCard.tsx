@@ -34,7 +34,7 @@ export function PetCard({ pet, nextVaccine, onPress, index = 0 }: PetCardProps) 
         {({ pressed }) => (
           <Card style={{ opacity: pressed ? 0.9 : 1, gap: spacing.md }}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.md }}>
-              <Avatar uri={pet.photo} name={pet.name} />
+              <Avatar uri={pet.photoUrl} name={pet.name} />
               <View style={{ flex: 1 }}>
                 <Text variant="bodyMedium">
                   {speciesIcon(pet.species)} {pet.name}

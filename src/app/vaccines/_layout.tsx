@@ -9,7 +9,6 @@ export default function VaccinesLayout() {
         headerStyle: { backgroundColor: colors.background },
         headerShadowVisible: false,
         headerTintColor: colors.text.primary,
-        headerBackTitleVisible: false,
       }}
     >
       <Stack.Screen name="create" options={{ title: 'Agregar vacuna' }} />

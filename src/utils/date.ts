@@ -24,7 +24,7 @@ const MONTHS_ES = [
 /** Parsea "YYYY-MM-DD" como fecha local, evitando el corrimiento de UTC. */
 export function parseISODate(isoDate: string): Date {
   const [year, month, day] = isoDate.split('-').map(Number);
-  return new Date(year, (month ?? 1) - 1, day ?? 1);
+  return new Date(year ?? 1970, (month ?? 1) - 1, day ?? 1);
 }
 
 export function toISODate(date: Date): string {

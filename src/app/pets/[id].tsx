@@ -69,7 +69,7 @@ export default function PetDetailScreen() {
     <ScreenContainer scrollable edges={['bottom']}>
       <View style={{ gap: spacing.xl, paddingVertical: spacing.lg }}>
         <View style={{ alignItems: 'center', gap: spacing.md }}>
-          <Avatar uri={pet.photo} name={pet.name} size={96} />
+          <Avatar uri={pet.photoUrl} name={pet.name} size={96} />
           <Text variant="h1">
             {speciesLabel?.icon} {pet.name}
           </Text>

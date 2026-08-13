@@ -9,7 +9,7 @@ const basePetInput: CreatePetInput = {
   gender: 'female',
   birthDate: '2022-03-01',
   weight: 4.2,
-  photo: null,
+  photoUrl: null,
   notes: null,
 };
 

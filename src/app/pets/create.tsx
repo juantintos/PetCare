@@ -21,7 +21,7 @@ export default function CreatePetScreen() {
       gender: values.gender,
       birthDate: values.birthDate,
       weight: values.weight ? Number(values.weight) : null,
-      photo: values.photo ?? null,
+      photoUrl: values.photoUrl ?? null,
       notes: values.notes || null,
     };
 
