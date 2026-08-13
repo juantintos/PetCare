@@ -105,7 +105,12 @@ export default function ProfileScreen() {
           <Button label="Cambiar contraseña" variant="outline" onPress={handleOpenChangePassword} />
         </Card>
 
-        <Button label="Cerrar sesión" variant="danger" onPress={handleLogoutPress} loading={logout.isPending} />
+        <Button
+          label="Cerrar sesión"
+          variant="danger"
+          onPress={handleLogoutPress}
+          loading={logout.isPending}
+        />
       </View>
 
       <Modal visible={editingProfile} onClose={() => setEditingProfile(false)}>
@@ -125,8 +130,16 @@ export default function ProfileScreen() {
       <Modal visible={changingPassword} onClose={() => setChangingPassword(false)}>
         <View style={{ gap: spacing.md }}>
           <Text variant="h3">Cambiar contraseña</Text>
-          <PasswordInput control={passwordForm.control} name="currentPassword" label="Contraseña actual" />
-          <PasswordInput control={passwordForm.control} name="newPassword" label="Nueva contraseña" />
+          <PasswordInput
+            control={passwordForm.control}
+            name="currentPassword"
+            label="Contraseña actual"
+          />
+          <PasswordInput
+            control={passwordForm.control}
+            name="newPassword"
+            label="Nueva contraseña"
+          />
           <PasswordInput
             control={passwordForm.control}
             name="confirmNewPassword"

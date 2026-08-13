@@ -30,7 +30,11 @@ const speciesIcon = (species: Pet['species']) =>
 export function PetCard({ pet, nextVaccine, onPress, index = 0 }: PetCardProps) {
   return (
     <Animated.View entering={FadeInUp.delay(index * 60).duration(300)}>
-      <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={`Ver detalles de ${pet.name}`}>
+      <Pressable
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel={`Ver detalles de ${pet.name}`}
+      >
         {({ pressed }) => (
           <Card style={{ opacity: pressed ? 0.9 : 1, gap: spacing.md }}>
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.md }}>
@@ -54,9 +58,15 @@ export function PetCard({ pet, nextVaccine, onPress, index = 0 }: PetCardProps) 
                   <Text variant="bodyMedium">{formatDateShort(nextVaccine.nextDoseDate)}</Text>
                   <Badge
                     label={
-                      getVaccineStatus(nextVaccine.nextDoseDate) === 'expired' ? 'Vencida' : 'Próxima'
+                      getVaccineStatus(nextVaccine.nextDoseDate) === 'expired'
+                        ? 'Vencida'
+                        : 'Próxima'
                     }
-                    tone={getVaccineStatus(nextVaccine.nextDoseDate) === 'expired' ? 'danger' : 'warning'}
+                    tone={
+                      getVaccineStatus(nextVaccine.nextDoseDate) === 'expired'
+                        ? 'danger'
+                        : 'warning'
+                    }
                   />
                 </View>
               </View>

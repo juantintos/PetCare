@@ -4,8 +4,10 @@ import { Controller, type Control, type FieldValues, type Path } from 'react-hoo
 import { Text } from '@/components/ui/Text';
 import { colors, radius, spacing } from '@/theme';
 
-export interface FormInputProps<TFormValues extends FieldValues>
-  extends Omit<TextInputProps, 'value' | 'onChangeText'> {
+export interface FormInputProps<TFormValues extends FieldValues> extends Omit<
+  TextInputProps,
+  'value' | 'onChangeText'
+> {
   control: Control<TFormValues>;
   name: Path<TFormValues>;
   label: string;

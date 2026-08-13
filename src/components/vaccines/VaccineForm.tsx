@@ -16,7 +16,12 @@ export interface VaccineFormProps {
   submitting?: boolean;
 }
 
-export function VaccineForm({ defaultValues, onSubmit, submitLabel, submitting }: VaccineFormProps) {
+export function VaccineForm({
+  defaultValues,
+  onSubmit,
+  submitLabel,
+  submitting,
+}: VaccineFormProps) {
   const { control, handleSubmit } = useForm<VaccineFormValues>({
     resolver: zodResolver(vaccineFormSchema),
     defaultValues: {
@@ -48,9 +53,24 @@ export function VaccineForm({ defaultValues, onSubmit, submitLabel, submitting }
         placeholder="AAAA-MM-DD"
         keyboardType="numbers-and-punctuation"
       />
-      <FormInput control={control} name="veterinarian" label="Veterinario (opcional)" placeholder="Dra. López" />
-      <FormInput control={control} name="clinic" label="Clínica (opcional)" placeholder="Clínica San Roque" />
-      <FormInput control={control} name="batchNumber" label="Número de lote (opcional)" placeholder="LT-2026-001" />
+      <FormInput
+        control={control}
+        name="veterinarian"
+        label="Veterinario (opcional)"
+        placeholder="Dra. López"
+      />
+      <FormInput
+        control={control}
+        name="clinic"
+        label="Clínica (opcional)"
+        placeholder="Clínica San Roque"
+      />
+      <FormInput
+        control={control}
+        name="batchNumber"
+        label="Número de lote (opcional)"
+        placeholder="LT-2026-001"
+      />
       <FormInput
         control={control}
         name="notes"

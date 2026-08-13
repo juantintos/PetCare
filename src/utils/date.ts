@@ -17,8 +17,18 @@ import type { VaccineStatus } from '@/types';
  */
 
 const MONTHS_ES = [
-  'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-  'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
+  'enero',
+  'febrero',
+  'marzo',
+  'abril',
+  'mayo',
+  'junio',
+  'julio',
+  'agosto',
+  'septiembre',
+  'octubre',
+  'noviembre',
+  'diciembre',
 ] as const;
 
 /** Parsea "YYYY-MM-DD" como fecha local, evitando el corrimiento de UTC. */

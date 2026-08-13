@@ -50,7 +50,13 @@ export function PetCardSkeleton() {
   );
 }
 
-export function ListSkeleton({ count = 3, Item = PetCardSkeleton }: { count?: number; Item?: () => JSX.Element }) {
+export function ListSkeleton({
+  count = 3,
+  Item = PetCardSkeleton,
+}: {
+  count?: number;
+  Item?: () => JSX.Element;
+}) {
   return (
     <View style={{ gap: spacing.md }}>
       {Array.from({ length: count }).map((_, index) => (

@@ -41,7 +41,11 @@ export default function ForgotPasswordScreen() {
             Si el correo existe en nuestro sistema, te enviamos instrucciones para recuperar tu
             contraseña.
           </Text>
-          <Button label="Volver al inicio de sesión" variant="outline" onPress={() => router.replace('/(auth)/login')} />
+          <Button
+            label="Volver al inicio de sesión"
+            variant="outline"
+            onPress={() => router.replace('/(auth)/login')}
+          />
         </View>
       </ScreenContainer>
     );
@@ -67,7 +71,11 @@ export default function ForgotPasswordScreen() {
           autoCorrect={false}
         />
 
-        <Button label="Enviar instrucciones" onPress={handleSubmit(() => setSubmitted(true))} fullWidth />
+        <Button
+          label="Enviar instrucciones"
+          onPress={handleSubmit(() => setSubmitted(true))}
+          fullWidth
+        />
       </View>
     </ScreenContainer>
   );

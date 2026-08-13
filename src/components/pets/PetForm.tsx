@@ -46,7 +46,12 @@ export function PetForm({ defaultValues, onSubmit, submitLabel, submitting }: Pe
       <FormInput control={control} name="name" label="Nombre" placeholder="Max" />
       <ChipSelect control={control} name="species" label="Especie" options={petSpeciesOptions} />
       <ChipSelect control={control} name="gender" label="Sexo" options={petGenderOptions} />
-      <FormInput control={control} name="breed" label="Raza (opcional)" placeholder="Golden Retriever" />
+      <FormInput
+        control={control}
+        name="breed"
+        label="Raza (opcional)"
+        placeholder="Golden Retriever"
+      />
       <FormInput
         control={control}
         name="birthDate"

@@ -47,15 +47,27 @@ export const lineHeight = {
  * pantalla, se elige una variante por su propósito ("¿qué es este texto?").
  */
 export const textVariants = {
-  h1: { fontFamily: fontFamily.displayBold, fontSize: fontSize['3xl'], lineHeight: lineHeight['3xl'] },
+  h1: {
+    fontFamily: fontFamily.displayBold,
+    fontSize: fontSize['3xl'],
+    lineHeight: lineHeight['3xl'],
+  },
   h2: { fontFamily: fontFamily.display, fontSize: fontSize['2xl'], lineHeight: lineHeight['2xl'] },
   h3: { fontFamily: fontFamily.display, fontSize: fontSize.xl, lineHeight: lineHeight.xl },
   bodyLg: { fontFamily: fontFamily.body, fontSize: fontSize.lg, lineHeight: lineHeight.lg },
   body: { fontFamily: fontFamily.body, fontSize: fontSize.base, lineHeight: lineHeight.base },
-  bodyMedium: { fontFamily: fontFamily.bodyMedium, fontSize: fontSize.base, lineHeight: lineHeight.base },
+  bodyMedium: {
+    fontFamily: fontFamily.bodyMedium,
+    fontSize: fontSize.base,
+    lineHeight: lineHeight.base,
+  },
   caption: { fontFamily: fontFamily.body, fontSize: fontSize.sm, lineHeight: lineHeight.sm },
   label: { fontFamily: fontFamily.bodySemibold, fontSize: fontSize.sm, lineHeight: lineHeight.sm },
-  overline: { fontFamily: fontFamily.bodySemibold, fontSize: fontSize.xs, lineHeight: lineHeight.xs },
+  overline: {
+    fontFamily: fontFamily.bodySemibold,
+    fontSize: fontSize.xs,
+    lineHeight: lineHeight.xs,
+  },
 } as const;
 
 export type TextVariant = keyof typeof textVariants;

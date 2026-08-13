@@ -24,7 +24,8 @@ export class AppError extends Error implements ApiError {
  * timeout, etc.) jamás deben llegar a la pantalla — solo estos textos.
  */
 const FRIENDLY_MESSAGES: Record<string, string> & { UNKNOWN: string } = {
-  NETWORK_ERROR: 'No pudimos conectarnos con el servidor.\nVerifica tu conexión e inténtalo nuevamente.',
+  NETWORK_ERROR:
+    'No pudimos conectarnos con el servidor.\nVerifica tu conexión e inténtalo nuevamente.',
   INVALID_CREDENTIALS: 'El correo o la contraseña son incorrectos.',
   EMAIL_ALREADY_EXISTS: 'Ya existe una cuenta registrada con este correo.',
   UNKNOWN: 'Ocurrió un error inesperado. Inténtalo de nuevo en unos minutos.',

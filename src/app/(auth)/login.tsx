@@ -48,7 +48,12 @@ export default function LoginScreen() {
             autoCapitalize="none"
             autoCorrect={false}
           />
-          <PasswordInput control={control} name="password" label="Contraseña" placeholder="••••••••" />
+          <PasswordInput
+            control={control}
+            name="password"
+            label="Contraseña"
+            placeholder="••••••••"
+          />
 
           <Link href="/(auth)/forgot-password" asChild>
             <Text variant="caption" style={{ alignSelf: 'flex-end', color: '#3F7D6E' }}>
@@ -74,7 +79,11 @@ export default function LoginScreen() {
           <Text variant="body" color="secondary">
             ¿No tienes cuenta?
           </Text>
-          <Text variant="bodyMedium" style={{ color: '#3F7D6E' }} onPress={() => router.push('/(auth)/register')}>
+          <Text
+            variant="bodyMedium"
+            style={{ color: '#3F7D6E' }}
+            onPress={() => router.push('/(auth)/register')}
+          >
             Regístrate
           </Text>
         </View>

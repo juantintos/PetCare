@@ -76,9 +76,16 @@ export default function EditVaccineScreen() {
   return (
     <ScreenContainer scrollable edges={['bottom']}>
       <View style={{ gap: spacing.xl, paddingVertical: spacing.lg }}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <View
+          style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           <Text variant="h1">Editar vacuna</Text>
-          <Button label="Eliminar" size="sm" variant="ghost" onPress={() => setShowDeleteDialog(true)} />
+          <Button
+            label="Eliminar"
+            size="sm"
+            variant="ghost"
+            onPress={() => setShowDeleteDialog(true)}
+          />
         </View>
 
         <VaccineForm

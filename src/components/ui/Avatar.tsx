@@ -30,13 +30,7 @@ export function Avatar({ uri, name, size = 56 }: AvatarProps) {
   };
 
   if (uri) {
-    return (
-      <Image
-        source={{ uri }}
-        style={commonStyle}
-        accessibilityLabel={`Foto de ${name}`}
-      />
-    );
+    return <Image source={{ uri }} style={commonStyle} accessibilityLabel={`Foto de ${name}`} />;
   }
 
   return (

@@ -39,10 +39,7 @@ export default function PetDetailScreen() {
   if (petQuery.isError || !petQuery.data) {
     return (
       <ScreenContainer edges={['bottom']}>
-        <ErrorState
-          title="No encontramos esta mascota"
-          onRetry={() => petQuery.refetch()}
-        />
+        <ErrorState title="No encontramos esta mascota" onRetry={() => petQuery.refetch()} />
       </ScreenContainer>
     );
   }
@@ -74,8 +71,18 @@ export default function PetDetailScreen() {
             {speciesLabel?.icon} {pet.name}
           </Text>
           <View style={{ flexDirection: 'row', gap: spacing.sm }}>
-            <Button label="Editar" size="sm" variant="outline" onPress={() => router.push({ pathname: '/pets/edit', params: { id: pet.id } })} />
-            <Button label="Eliminar" size="sm" variant="ghost" onPress={() => setShowDeleteDialog(true)} />
+            <Button
+              label="Editar"
+              size="sm"
+              variant="outline"
+              onPress={() => router.push({ pathname: '/pets/edit', params: { id: pet.id } })}
+            />
+            <Button
+              label="Eliminar"
+              size="sm"
+              variant="ghost"
+              onPress={() => setShowDeleteDialog(true)}
+            />
           </View>
         </View>
 
@@ -93,7 +100,8 @@ export default function PetDetailScreen() {
             title="Cartilla de vacunación"
             action={{
               label: '+ Agregar',
-              onPress: () => router.push({ pathname: '/vaccines/create', params: { petId: pet.id } }),
+              onPress: () =>
+                router.push({ pathname: '/vaccines/create', params: { petId: pet.id } }),
             }}
           />
 
@@ -108,7 +116,9 @@ export default function PetDetailScreen() {
                 title="Sin vacunas registradas"
                 description={`Registra la primera vacuna de ${pet.name} para empezar su cartilla digital.`}
                 actionLabel="+ Agregar vacuna"
-                onAction={() => router.push({ pathname: '/vaccines/create', params: { petId: pet.id } })}
+                onAction={() =>
+                  router.push({ pathname: '/vaccines/create', params: { petId: pet.id } })
+                }
               />
             </Card>
           ) : (
@@ -119,7 +129,10 @@ export default function PetDetailScreen() {
                   vaccine={vaccine}
                   index={index}
                   onPress={() =>
-                    router.push({ pathname: '/vaccines/edit', params: { id: vaccine.id, petId: pet.id } })
+                    router.push({
+                      pathname: '/vaccines/edit',
+                      params: { id: vaccine.id, petId: pet.id },
+                    })
                   }
                 />
               ))}

@@ -55,7 +55,12 @@ export default function RegisterScreen() {
             autoCapitalize="none"
             autoCorrect={false}
           />
-          <PasswordInput control={control} name="password" label="Contraseña" placeholder="Mínimo 8 caracteres" />
+          <PasswordInput
+            control={control}
+            name="password"
+            label="Contraseña"
+            placeholder="Mínimo 8 caracteres"
+          />
           <PasswordInput
             control={control}
             name="confirmPassword"

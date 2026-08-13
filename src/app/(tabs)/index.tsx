@@ -51,7 +51,11 @@ export default function DashboardScreen() {
       <View style={{ gap: spacing.xl }}>
         <Animated.View entering={FadeIn.duration(300)}>
           <Text variant="overline" color="tertiary">
-            {new Date().toLocaleDateString('es-MX', { weekday: 'long', day: 'numeric', month: 'long' })}
+            {new Date().toLocaleDateString('es-MX', {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'long',
+            })}
           </Text>
           <Text variant="h1">Hola, {user?.firstName} 👋</Text>
         </Animated.View>
@@ -68,7 +72,10 @@ export default function DashboardScreen() {
         )}
 
         <View>
-          <SectionHeader title="Tus mascotas" action={{ label: 'Ver todas', onPress: () => router.push('/(tabs)/pets') }} />
+          <SectionHeader
+            title="Tus mascotas"
+            action={{ label: 'Ver todas', onPress: () => router.push('/(tabs)/pets') }}
+          />
 
           {petsQuery.isLoading ? (
             <ListSkeleton count={2} />
@@ -111,7 +118,11 @@ function SummaryStat({
   tone?: 'warning' | 'danger';
 }) {
   const valueColor =
-    tone === 'danger' ? colors.status.danger : tone === 'warning' ? colors.status.warning : colors.text.primary;
+    tone === 'danger'
+      ? colors.status.danger
+      : tone === 'warning'
+        ? colors.status.warning
+        : colors.text.primary;
 
   return (
     <Card style={{ flex: 1, alignItems: 'center', gap: spacing.xs }} padding="md">

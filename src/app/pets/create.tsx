@@ -44,7 +44,11 @@ export default function CreatePetScreen() {
           </Text>
         </View>
 
-        <PetForm onSubmit={handleSubmit} submitLabel="Guardar mascota" submitting={createPet.isPending} />
+        <PetForm
+          onSubmit={handleSubmit}
+          submitLabel="Guardar mascota"
+          submitting={createPet.isPending}
+        />
       </View>
     </ScreenContainer>
   );

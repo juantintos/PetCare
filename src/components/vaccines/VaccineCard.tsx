@@ -38,7 +38,13 @@ export function VaccineCard({ vaccine, onPress, index = 0 }: VaccineCardProps) {
       >
         {({ pressed }) => (
           <Card style={{ opacity: pressed ? 0.9 : 1, gap: spacing.sm }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+              }}
+            >
               <Text variant="bodyMedium" style={{ flex: 1 }}>
                 {vaccine.name}
               </Text>

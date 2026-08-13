@@ -38,10 +38,22 @@ export function ConfirmDialog({
         </Text>
         <View style={{ flexDirection: 'row', gap: spacing.sm, marginTop: spacing.sm }}>
           <View style={{ flex: 1 }}>
-            <Button label="Cancelar" variant="outline" onPress={onCancel} fullWidth disabled={loading} />
+            <Button
+              label="Cancelar"
+              variant="outline"
+              onPress={onCancel}
+              fullWidth
+              disabled={loading}
+            />
           </View>
           <View style={{ flex: 1 }}>
-            <Button label={confirmLabel} variant="danger" onPress={onConfirm} fullWidth loading={loading} />
+            <Button
+              label={confirmLabel}
+              variant="danger"
+              onPress={onConfirm}
+              fullWidth
+              loading={loading}
+            />
           </View>
         </View>
       </View>

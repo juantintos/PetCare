@@ -39,7 +39,11 @@ export default function CreateVaccineScreen() {
     <ScreenContainer scrollable edges={['bottom']}>
       <View style={{ gap: spacing.xl, paddingVertical: spacing.lg }}>
         <Text variant="h1">Agregar vacuna</Text>
-        <VaccineForm onSubmit={handleSubmit} submitLabel="Guardar vacuna" submitting={createVaccine.isPending} />
+        <VaccineForm
+          onSubmit={handleSubmit}
+          submitLabel="Guardar vacuna"
+          submitting={createVaccine.isPending}
+        />
       </View>
     </ScreenContainer>
   );

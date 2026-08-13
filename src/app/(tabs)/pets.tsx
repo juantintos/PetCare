@@ -17,7 +17,9 @@ export default function PetsScreen() {
   return (
     <ScreenContainer scrollable={pets.length > 0}>
       <View style={{ gap: spacing.lg, flex: pets.length > 0 ? undefined : 1 }}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <View
+          style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           <Text variant="h1">Mis mascotas</Text>
           {pets.length > 0 && (
             <Button label="+ Agregar" size="sm" onPress={() => router.push('/pets/create')} />

@@ -4,7 +4,10 @@ import { simulateNetworkDelay } from './api';
 import { mockHash, readUsersDb, toPublicUser, writeUsersDb } from './_mockUsersRepository';
 
 export const profileService = {
-  async updateProfile(userId: string, changes: Pick<User, 'firstName' | 'lastName'>): Promise<User> {
+  async updateProfile(
+    userId: string,
+    changes: Pick<User, 'firstName' | 'lastName'>,
+  ): Promise<User> {
     await simulateNetworkDelay();
     const users = await readUsersDb();
     const index = users.findIndex((u) => u.id === userId);
@@ -33,7 +36,10 @@ export const profileService = {
     }
 
     if (users[index]!.passwordHash !== mockHash(currentPassword)) {
-      throw new AppError({ message: 'La contraseña actual es incorrecta', code: 'INVALID_CREDENTIALS' });
+      throw new AppError({
+        message: 'La contraseña actual es incorrecta',
+        code: 'INVALID_CREDENTIALS',
+      });
     }
 
     users[index] = {
